@@ -1,0 +1,212 @@
+body {
+  background-color: lightgrey;
+}
+
+.wrapper-title {
+  height: 30vh;
+  background-color: lightgrey;
+  padding: 100px 150px;
+}
+
+.container-title {
+  background-color: white;
+  border: 2px solid rgba(50,50,50,0.5);
+  box-shadow: 3px 3px rgba(150,150,150,1);
+  padding: 50px 50px 50px 50px;
+}
+
+.wrapper-data {
+  height: 70vh;
+  background-color: lightgrey;
+  padding: 20px 150px;
+}
+
+.container-data {
+  background-color: white;
+  border: 2px solid rgba(50,50,50,0.5);
+  box-shadow: 3px 3px rgba(150,150,150,1);
+  padding: 50px 50px 150px 50px;
+  position: relative;
+}
+
+.task-placeholder {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.title-text {
+  font-size: 40px;
+  color: rgba(100,100,100,0.8);
+  padding-left: 20px;
+  border-left: 2px solid rgba(150,150,150,1);
+}
+
+.details-placeholder {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.details-text {
+  font-size: 30px;
+  color: rgba(100,100,100,0.8);
+  padding-left: 20px;
+}
+
+.add-margin-bottom {
+  border-bottom: 1px solid rgba(150,150,150,0.8);
+  padding-bottom: 20px;
+}
+
+.task-complete-text {
+  margin-top: 100px;
+  font-size: 50px;
+  color: green;
+  padding-left: 0px;
+}
+
+.task-notcomplete-text {
+  margin-top: 100px;
+  font-size: 50px;
+  color: red;
+  padding-left: 0px;
+}
+
+.container-colorize-green {
+  background-color: rgba(170, 255, 180, 1);
+}
+
+.container-colorize-red {
+  background-color: rgba(242, 179, 179, 1);
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
+}
+
+.back-to-home {
+  position: absolute;
+  top: 500px;
+  left: 300px;
+  font-size: 30px !important;
+}
+
+.btn-back {
+  width: 300px;
+  height: 50px;
+  font-size: 50px;
+  background-color: rgba(150,150,150,1);
+  color: white;
+  padding: 20px 350px;
+  border-radius: 12px;
+
+  &:hover {
+    color: white;
+    background-color: rgba(100,100,100,1);
+    border: 2px solid darkblue;
+  }
+}
+
+.back-to-home a:link, .back-to-home a:visited, .back-to-home a:hover, .back-to-home a:active  {
+    text-decoration: none;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 180px;
+  right: 400px;
+  font-size: 20px !important;
+}
+
+.btn-edit {
+  font-size: 30px;
+  background-color: rgba(64,128,250,1);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: rgba(34,120,200,1);
+    color: white;
+    transition: all 170ms;
+  }
+}
+
+.edit-btn a:link, .edit-btn a:visited, .edit-btn a:hover, .edit-btn a:active  {
+    text-decoration: none;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 180px;
+  right: 200px;
+  font-size: 20px !important;
+}
+
+.btn-delete {
+  font-size: 30px;
+  background-color: darkred;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: red;
+    color: white;
+    transition: all 170ms;
+  }
+}
+
+.delete-btn a:link, .delete-btn a:visited, .delete-btn a:hover, .delete-btn a:active  {
+    text-decoration: none;
+}
+
+.status-btn {
+  position: absolute;
+  top: 310px;
+  right: 600px;
+  font-size: 20px !important;
+}
+
+.btn-status {
+  font-size: 30px;
+  background-color: darkred;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: red;
+    color: white;
+    transition: all 170ms;
+  }
+}
+
+.status-btn a:link, .status-btn a:visited, .status-btn a:hover, .status-btn a:active  {
+    text-decoration: none;
+}
+
+.status-green {
+  background-color: darkgreen !important;
+  margin-right: 20px;
+
+  &:hover {
+    background-color: green !important;
+    transition: all 170ms;
+  }
+}
+
+.status-red {
+  background-color: darkred !important;
+
+  &:hover {
+    background-color: red !important;
+    transition: all 170ms;
+  }
+}
+
+
+

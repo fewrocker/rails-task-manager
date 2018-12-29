@@ -1,0 +1,75 @@
+.wrapper-form {
+  height: 100vh;
+  background-color: lightgrey;
+  padding: 100px 450px;
+}
+
+.container-form {
+  position: relative;
+  background-color: white;
+  border: 2px solid rgba(50,50,50,0.5);
+  box-shadow: 3px 3px rgba(150,150,150,1);
+  padding: 50px 50px 50px 50px;
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 80px;
+    color: rgba(50,50,50,0.8);
+  }
+}
+
+.form-label-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+.form-label-description {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 13px;
+}
+
+#title {
+  width: 600px;
+}
+
+#description {
+  width: 600px;
+  height: 200px;
+}
+
+#submit-new-task {
+  background-color: darkblue;
+  margin-top: 30px;
+  margin-left: 25px;
+  color: white;
+  font-size: 30px;
+  width: 800px;
+}
+
+
+.back-to-home-form {
+  position: absolute;
+  top: 670px;
+  left: 100px;
+  font-size: 20px !important;
+}
+
+.btn-back-form {
+  font-size: 30px;
+  background-color: darkgrey;
+  color: white;
+  padding: 15px 300px;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: rgba(100,100,100,0.8);
+    color: white;
+    transition: all 170ms;
+  }
+}
+
+.back-to-home-form a:link, .back-to-home-form a:visited, .back-to-home-form a:hover, .back-to-home-form a:active  {
+    text-decoration: none;
+}

@@ -1,0 +1,47 @@
+<div class="wrapper-title">
+  <% if @task.completed == true %>
+  <div class="container-title container-colorize-green">
+    <h1><span class="task-placeholder">Task #<%= @task.id %></span>&nbsp;&nbsp;&nbsp;<span class="title-text text-green"><%= @task.title %></span></h1>
+  </div>
+  <% else %>
+  <div class="container-title container-colorize-red">
+    <h1><span class="task-placeholder">Task #<%= @task.id %></span>&nbsp;&nbsp;&nbsp;<span class="title-text text-red"><%= @task.title %></span></h1>
+  </div>
+  <% end %>
+
+  <div class="edit-btn">
+      <%= link_to "Edit this task", edit_task_path, class: "btn-edit" %>
+  </div>
+  <div class="delete-btn">
+      <%= link_to "Delete", task_path(@task), class: "btn-delete", method: :delete, data: {confirm: 'Are you sure?'} %>
+  </div>
+</div>
+
+<div class="wrapper-data">
+  <% if @task.completed == true %>
+  <div class="container-data container-colorize-green">
+  <% else %>
+  <div class="container-data container-colorize-red">
+  <% end %>
+    <h2 class="add-margin-bottom"><span class="details-placeholder">Details:</span> <span class="details-text"> <%= @task.details %></span></h2>
+
+    <% if @task.completed == true %>
+    <h2 class="task-complete-text text-center">This task is completed</h2>
+    <% else %>
+    <h2 class="task-notcomplete-text text-center">This task is not yet completed</h2>
+    <% end %>
+
+    <div class="status-btn">
+      <% if @task.completed == true %>
+        <%= link_to "Mark as not done", mark_not_done_show_path(@task), class: "btn-status status-red" %>
+      <% else %>
+        <%= link_to "Mark as done", mark_done_show_path(@task), class: "btn-status status-green" %>
+      <% end %>
+    </div>
+
+    <div class="back-to-home">
+      <%= link_to "Back to list", tasks_path, class: "btn-back" %>
+    </div>
+  </div>
+</div>
+

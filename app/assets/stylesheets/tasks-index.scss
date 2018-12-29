@@ -1,0 +1,97 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul {
+list-style-type: none;
+}
+
+.wrapper-list {
+  height: 100vh;
+  background-color: lightgrey;
+  padding: 100px 0;
+}
+
+.container-list {
+  margin: 0px 400px;
+  background-color: white;
+  border: 2px solid rgba(50,50,50,0.5);
+  box-shadow: 3px 3px rgba(150,150,150,1);
+  padding-bottom: 50px;
+
+  h1 {
+    font-size: 50px;
+    border-bottom: 2px solid rgba(150,150,150,1);
+    margin: 50px 100px;
+  }
+}
+
+.task-list-ul li {
+  margin: 0 95px;
+  padding-left: 30px;
+
+  &:hover {
+    background-color: rgba(200,200,200,1);
+  }
+}
+
+.task-name {
+  color: rgba(50,50,50,0.8);
+  font-size: 30px;
+}
+.checkbox-undone {
+  color: red;
+  font-size: 30px;
+}
+
+.checkbox-done {
+  color: green;
+  font-size: 30px;
+}
+
+.clear-link {
+  text-decoration: none;
+}
+
+// Remove all link decorations
+li a:link, li a:visited, li a:hover, li a:active,  {
+    text-decoration:none;
+}
+
+.container-menu {
+
+  margin: 50px 400px 0 400px;
+  background-color: white;
+  border: 2px solid rgba(50,50,50,0.5);
+  box-shadow: 3px 3px rgba(150,150,150,1);
+  padding-bottom: 50px;
+
+  h1 {
+    font-size: 40px;
+    margin: 50px 100px;
+  }
+}
+
+.option-list li {
+  margin: 0 95px;
+  padding-left: 30px;
+  font-size: 25px;
+
+  &:hover {
+    color: darkblue;
+    background-color: lightblue;
+  }
+}
+
+
+.progress-danger {
+  color: red;
+}
+
+.progress-ok {
+  color: orange;
+}
+
+.progress-awesome {
+  color: green;
+}

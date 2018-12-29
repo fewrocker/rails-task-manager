@@ -1,0 +1,66 @@
+<div class="wrapper-list">
+  <div class="container-list" id="task-box">
+    <h1 class="text-center">My tasks <span id="task-counter">(<span id = "tasks-done"><%= @tasks.select{|task| task.completed == true}.length%></span>/<span id="tasks-total"><%= @tasks.length %></span>)</span></h1>
+    <div class="tasks-list-div">
+      <ul class="task-list-ul">
+        <% @tasks.each do |task| %>
+          <% if task.completed == true %>
+            <li>
+              <%= link_to mark_not_done_index_path(task) do %>
+                <%= content_tag :i, "", :class => "far fa-check-square checkbox-done" %>
+              <% end %>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <%= link_to task.title, task_path(task), class: "task-name"%>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to mark_done_index_path(task) do %>
+                <%= content_tag :i, "", :class => "far fa-square checkbox-undone" %>
+              <% end %>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <%= link_to task.title, task_path(task), class: "task-name"%>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="container-menu">
+    <h1 class="text-center">Options</h1>
+    <div class="tasks-list-div">
+      <ul class="option-list">
+        <li> <%= link_to "Create new task", new_task_path%> </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+      setInterval(function() {
+      const taskCounter = document.getElementById("task-counter");
+      const taskBox = document.getElementById("task-box")
+      let tasksDone = parseInt(document.getElementById("tasks-done").innerHTML,10);
+      let tasksTotal = parseInt(document.getElementById("tasks-total").innerHTML,10);
+      progressRatio = tasksDone/tasksTotal;
+      if (progressRatio < 0.3) {
+        taskCounter.style.color = "darkred";
+        taskBox.style.backgroundColor = "rgba(255,150,150,1)";
+      } else if (progressRatio >= 0.3 && progressRatio < 0.5) {
+        taskCounter.style.color = "red";
+        taskBox.style.backgroundColor = "rgba(255,210,210,1)";
+      } else if (progressRatio >= 0.5 && progressRatio < 0.7) {
+        taskCounter.style.color = "orange";
+        taskBox.style.backgroundColor = "rgba(255,255,200,1)";
+      } else if (progressRatio >= 0.7 && progressRatio < 0.9) {
+        taskCounter.style.color = "green";
+        taskBox.style.backgroundColor = "rgba(210,255,210,1)";
+      } else {
+        taskCounter.style.color = "darkgreen";
+        taskBox.style.backgroundColor = "rgba(150,255,150,1)";
+      }
+    }, 2);
+  </script>
+
+</div>
